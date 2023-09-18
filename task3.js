@@ -29,35 +29,35 @@ console.log('veikia')
 
 let newArr = ['start', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51, 55, 0, 33, 789, 6543, 1, 'trylika', 444, 321, 654, -1, 987, -333, -321, 'end'] 
 
-// 4.1. Tik skaičius (number tipo duomenis).
+// // 4.1. Tik skaičius (number tipo duomenis).
 
-console.log(newArr)
+// console.log(newArr)
 
 
-    // console.log(newArr[i])
+//     // console.log(newArr[i])
 
-    let ul41 = document.querySelector('#task-41')
-    let list41 = document.createElement('li')
-    ul41.append(list41);
+//     let ul41 = document.querySelector('#task-41')
+//     let list41 = document.createElement('li')
+//     ul41.append(list41);
 
-    for (let i = 0; i < newArr.length; i++) {
-    let item = newArr[i]
-    if (!isNaN(item)) {
-        console.log(item)
-    }
-}
+//     for (let i = 0; i < newArr.length; i++) {
+//     let item = newArr[i]
+//     if (!isNaN(item)) {
+//         console.log(item)
+//     }
+// }
 
-newArr.map(item => {
-    if (!isNaN(item)) {
-        console.log(item)
-    }
-})
+// newArr.map(item => {
+//     if (!isNaN(item)) {
+//         console.log(item)
+//     }
+// })
 
-newArr.forEach(item => {
-    if(!isNaN(item)) {
-    console.log(item)
-    }
-})
+// newArr.forEach(item => {
+//     if(!isNaN(item)) {
+//     console.log(item)
+//     }
+// })
 
 // 4.2. Tik tekstą (string tipo duomenis).
 
@@ -431,3 +431,63 @@ newArr.map((item, index) => {
         }
     }
 })
+
+// 5. Atlikti ta patį, kaip ir ketvirtoje užduotyje, tačiau atsakymus išvesti ne į konsolę, o į ul elementus.
+// 5.1. Kiekvienai užduočiai HTML faile sukurti naują ul elementą ir jam priskirti unikalų id, pvz.:
+//   <ul id="task-41"></ul>
+//   <ul id="task-42"></ul>
+//   <ul id="task-43"></ul>
+//   Ir t.t.
+// 5.2. JavaScript'e paselektinti šiuos elementus.
+// 5.3. Kiekvienas ketvirtos užduoties ciklo atsakymas turėtų būti įdėtas į li elementą.
+// 5.4. Kiekvienas li elementas turėtų būti įdėtas į atitinkamą ul elementą.
+
+// 4.1. Tik skaičius (number tipo duomenis).
+
+// let ulElement41 = document.querySelector('#task-41')
+    
+// for (let i = 0; i < newArr.length; i++) {
+//     let item = newArr[i]
+//     if (!isNaN(item)) {
+//         let liElement = `<li>${item}</li>`
+//         ulElement41.innerHTML += liElement
+//     }
+// }
+
+// newArr.map(item => {
+//     if (!isNaN(item)) {
+//         let liElement = `<li>${item}</li>`
+//         ulElement41.innerHTML += liElement
+//     }
+// })
+
+// newArr.forEach(item => {
+//     if(!isNaN(item)) {
+//     console.log(item)
+//     }
+// })
+
+// 4.2. Tik tekstą (string tipo duomenis).
+
+let ulElement42 = document.querySelector('#task-42')
+
+for (let i = 0; i < newArr.length; i++) {
+    let item = newArr[i]
+    if (isNaN(item)) {
+        let liElement = `<li>${item}</li>`
+        ulElement42.innerHTML += liElement
+    }
+}
+
+newArr.map(item => {
+    if(isNaN(item)) {
+        let liElement = `<li>${item}</li>`
+        ulElement42.innerHTML += liElement
+    }
+})
+
+// newArr.forEach(item => {
+//     if(isNaN(item)) {
+//         console.log(item)
+//     }
+// })
