@@ -453,6 +453,16 @@ newArr.map((item, index) => {
 //         ulElement41.innerHTML += liElement
 //     }
 // }
+function task41(data) {
+for (let i = 0; i < data.length; i++) {
+    let item = data[i]
+    if (!isNaN(item)) {
+        let liElement = `<li>${item}</li>`
+        ulElement41.innerHTML += liElement
+    }
+}
+}
+task41(data)
 
 // newArr.map(item => {
 //     if (!isNaN(item)) {
