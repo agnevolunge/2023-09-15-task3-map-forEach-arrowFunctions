@@ -469,25 +469,81 @@ newArr.map((item, index) => {
 
 // 4.2. Tik tekstą (string tipo duomenis).
 
-let ulElement42 = document.querySelector('#task-42')
+// let ulElement42 = document.querySelector('#task-42')
 
-for (let i = 0; i < newArr.length; i++) {
-    let item = newArr[i]
-    if (isNaN(item)) {
-        let liElement = `<li>${item}</li>`
-        ulElement42.innerHTML += liElement
-    }
-}
+// for (let i = 0; i < newArr.length; i++) {
+//     let item = newArr[i]
+//     if (isNaN(item)) {
+//         let liElement = `<li>${item}</li>`
+//         ulElement42.innerHTML += liElement
+//     }
+// }
 
-newArr.map(item => {
-    if(isNaN(item)) {
-        let liElement = `<li>${item}</li>`
-        ulElement42.innerHTML += liElement
-    }
-})
+// newArr.map(item => {
+//     if(isNaN(item)) {
+//         let liElement = `<li>${item}</li>`
+//         ulElement42.innerHTML += liElement
+//     }
+// })
 
 // newArr.forEach(item => {
 //     if(isNaN(item)) {
 //         console.log(item)
+//     }
+// })
+
+// 4.3. Tik skaičius (number tipo duomenis) ir juos pakelti 4-tuoju laipsniu.
+
+// let ulElement43 = document.querySelector('#task-43')
+
+// for (let i = 0; i < newArr.length; i++) {
+//     let item = newArr[i]
+//     let output = Math.pow(item, 4)
+    
+//     if (!isNaN (item)) {
+//         let liElement = `<li>${output}</li>`
+//         ulElement43.innerHTML += liElement
+//     }
+// }
+// newArr.map(item => {
+//     let output = Math.pow(item, 4)
+//     if(!isNaN(item)) {
+//         let liElement = `<li>${output}</li>`
+//         ulElement43.innerHTML += liElement
+//     }
+// })
+
+// newArr.forEach(item => {
+//     let output = Math.pow(item,4)
+//     if (!isNaN(item)) {
+//         console.log(output)
+//     }
+// })
+
+// 4.4. Tik skaičius (number tipo duomenis) ir prie jų pridėti 55.
+
+let ulElement44 = document.querySelector('#task-44')
+for (let i = 0; i < newArr.length; i++) {
+    let item = newArr[i]
+    let output = item + 55
+
+    if (!isNaN(item)) {
+        let liElement = `<li>${output}</li>`
+        ulElement44.innerHTML += liElement
+    }
+}
+
+newArr.map(item => {
+    let output = item + 55
+    if (!isNaN(item)) {
+        let liElement = `<li>${output}</li>`
+        ulElement44.innerHTML += liElement
+    }
+})
+
+// newArr.forEach(item => {
+//     let output = item + 55
+//     if(!isNaN(item)) {
+//         console.log(output)
 //     }
 // })
