@@ -33,26 +33,31 @@ let newArr = ['start', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51
 
 console.log(newArr)
 
-// for (let i = 0; i < newArr.length; i++) {
-//     // console.log(newArr[i])
 
-//     let item = newArr[i]
-//     if (!isNaN(item)) {
-//         console.log(item)
-//     }
-// }
+    // console.log(newArr[i])
 
-// newArr.map(item => {
-//     if (!isNaN(item)) {
-//         console.log(item)
-//     }
-// })
+    let ul41 = document.querySelector('#task-41')
+    let list41 = document.createElement('li')
+    ul41.append(list41);
 
-// newArr.forEach(item => {
-//     if(!isNaN(item)) {
-//     console.log(item)
-//     }
-// })
+    for (let i = 0; i < newArr.length; i++) {
+    let item = newArr[i]
+    if (!isNaN(item)) {
+        console.log(item)
+    }
+}
+
+newArr.map(item => {
+    if (!isNaN(item)) {
+        console.log(item)
+    }
+})
+
+newArr.forEach(item => {
+    if(!isNaN(item)) {
+    console.log(item)
+    }
+})
 
 // 4.2. Tik tekstą (string tipo duomenis).
 
@@ -352,27 +357,77 @@ console.log(newArr)
 // })
 
 // 4.13. Tik tekstą (string tipo duomenis), tačiau kiekviena žodžio pirmą ir trečią raidę pakeičiant brūkšniu (underscore), pvz.: "_t_rt";
+
 // for (let i = 0; i < newArr.length; i++) {
-//     let item = newArr[i];
-//     if (isNaN(item)) {
-//         console.log(item.underscore().replace('_'))
+//     if (typeof newArr [i] === 'string') {
+//     let lettersArray = newArr[i].split('')
+//     lettersArray[0] = '_'
+//     lettersArray[2] = '_'
+//     let updatedWord = lettersArray.join('')
+//     console.log(updatedWord)
 //     }
-// }  
+// }
 
-for (let i = 0; i < newArr.length; i++) {
-    if (typeof newArr [i] === 'string') {
-    let newString = newArr [i].replace(/./g, (char, index) => (index === 0 || index === 2) ? '_' : char);
-    console.log(newString);
-    }
-}
+// newArr.map(item => {
+//   if (typeof item === 'string') {
+//     let lettersArray = item.split('');
+//     lettersArray[0] = '_';
+//     lettersArray[2] = '_';
+//     let updatedWord = lettersArray.join('');
+//     console.log(updatedWord);
+//   }
+// })
 
+// newArr.forEach(item => {
+//     if (typeof item === 'string') {
+//       let lettersArray = item.split('');
+//       lettersArray[0] = '_';
+//       lettersArray[2] = '_';
+//       let updatedWord = lettersArray.join('');
+//       console.log(updatedWord);
+//     }
+//   })
 
 // 4.14. Tik tekstą (string tipo duomenis), tačiau žodį parašant atvirkščiai, pvz.: vietoje "start" parašyti "trats";
 
-for (let i = 0; i < newArr.length; i++) {
-    if (typeof newArr[i] === 'string') {
-    console.log(newArr[i].split('').reverse().join(''));
-    }
-}
+// for (let i = 0; i < newArr.length; i++) {
+//     if (typeof newArr[i] === 'string') {
+//     let lettersArray = newArr[i].split('')
+//     let updatedWord = lettersArray.reverse().join('')
+//     console.log(updatedWord)
+//     }
+// }
+
+// newArr.map(item => {
+//     if (typeof item === 'string') {
+//     let lettersArray = item.split('')
+//     let updatedWord = lettersArray.reverse().join('')
+//     console.log(updatedWord)
+//     }
+// })
 
 // 4.15. Tik tekstą (string tipo duomenis) ir prie kiekvieno teksto parašyti tarp kokių narių masyve jis yra, pvz.: "Word obuolys is between -5564 and -51 in the array".
+
+for (let i = 0; i < newArr.length; i++) {
+  if (typeof newArr[i] === 'string') {
+    if (i === 0) {
+      console.log(`Word ${newArr[i]} is the first in the array and before ${newArr[i + 1]} in the array.`);
+    } else if (i === newArr.length - 1) {
+      console.log(`Word ${newArr[i]} is the last in the array and after ${newArr[i - 1]} in the array.`);
+    } else {
+      console.log(`Word ${newArr[i]} is between ${newArr[i - 1]} and ${newArr[i + 1]} in the array.`);
+    }
+  }
+}
+
+newArr.map((item, index) => {
+    if (typeof item === 'string') {
+        if (index === 0) {
+            console.log(`Word ${item} is the first in the array and before ${newArr[index + 1]} in the array.`)
+        } else if (index === newArr.length - 1) {
+            console.log(`Word ${item} is the last in the array and before ${newArr[index - 1]} in the array.`)
+        } else {
+            console.log(`Word ${item} is between ${newArr[index - 1]} and ${newArr[index + 1]} in the array.`)
+        }
+    }
+})
